@@ -53,7 +53,7 @@ global:
   # Default image used by all components
   image:
     # -- If defined, a repository applied to all Argo CD deployments
-    repository: quay.io/argoproj/argocd
+    repository: gcr.io/common-services-b06b/argoproj/argocd
     # -- Overrides the global Argo CD image tag whose default is the chart appVersion
     tag: ""
     # -- If defined, a imagePullPolicy applied to all Argo CD deployments
@@ -914,7 +914,7 @@ dex:
   ## Dex image
   image:
     # -- Dex image repository
-    repository: ghcr.io/dexidp/dex
+    repository: gcr.io/common-services-b06b/argoproj/dexidp/dex
     # -- Dex image tag
     tag: v2.36.0
     # -- Dex imagePullPolicy
@@ -1140,7 +1140,7 @@ redis:
   ## Redis image
   image:
     # -- Redis repository
-    repository: public.ecr.aws/docker/library/redis
+    repository: gcr.io/common-services-b06b/argoproj/library/redis
     # -- Redis tag
     tag: 7.0.11-alpine
     # -- Redis image pull policy
@@ -1156,7 +1156,7 @@ redis:
     ## Prometheus redis-exporter image
     image:
       # -- Repository to use for the redis-exporter
-      repository: public.ecr.aws/bitnami/redis-exporter
+      repository: gcr.io/common-services-b06b/argoproj/bitnami/redis-exporter
       # -- Tag to use for the redis-exporter
       tag: 1.45.0
       # -- Image pull policy for the redis-exporter
@@ -1362,7 +1362,7 @@ redis-ha:
     # -- Enable Prometheus redis-exporter sidecar
     enabled: false
     # -- Repository to use for the redis-exporter
-    image: public.ecr.aws/bitnami/redis-exporter
+    image: gcr.io/common-services-b06b/argoproj/bitnami/redis-exporter
     # -- Tag to use for the redis-exporter
     tag: 1.45.0
   persistentVolume:
@@ -1512,7 +1512,7 @@ server:
     ## Argo UI extensions image
     image:
       # -- Repository to use for extensions image
-      repository: "ghcr.io/argoproj-labs/argocd-extensions"
+      repository: "gcr.io/common-services-b06b/argoproj/argoproj-labs/argocd-extensions"
       # -- Tag to use for extensions image
       tag: "v0.2.1"
       # -- Image pull policy for extensions
